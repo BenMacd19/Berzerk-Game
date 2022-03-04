@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00dabce46df44d43b17b65924febc78, type: 3}
+  m_Name: ShooterLevel2
+  m_EditorClassIdentifier: 
+  followDistance: 0
+  shootDistance: 0
+  keepDistance: 0
+  keepDistanceDegrees: 0
+  turnSpeed: 0
+  bulletPrefab: {fileID: 0}
+  muzzleFlash: {fileID: 0}
+  bulletForce: 0
+  rateOfFire: 0
+  shooterFollowDistance: 30
+  shooterShootDistance: 20
+  shooterKeepDistance: 10
+  shooterKeepDistanceDegrees: 60
+  shooterTurnSpeed: 10
+  shooterBulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
+  shooterMuzzleFlash: {fileID: 0}
+  shooterBulletForce: 20
+  shooterRateOfFire: 0.25
