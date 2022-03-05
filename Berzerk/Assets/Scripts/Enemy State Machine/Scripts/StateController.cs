@@ -8,6 +8,7 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public IAstarAI ai;
     [HideInInspector] public int aiLevel;
     [HideInInspector] public int wallLayerMask = 1 << 8;
+    [HideInInspector] public Health enemyHealth;
     [HideInInspector] public float timer;
     
     [Header("AI Level Stats")]
@@ -25,6 +26,7 @@ public class StateController : MonoBehaviour {
     void Awake () 
     {
         ai = GetComponent<IAstarAI>();
+        enemyHealth = GetComponent<Health>();
     }
 
     void Update()

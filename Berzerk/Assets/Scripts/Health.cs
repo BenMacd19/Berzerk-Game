@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] float health = 100;
+    [SerializeField] public float health = 100;
     [SerializeField] public float maxHealth= 100;
 
     [SerializeField] GameObject healthBarUI;
@@ -45,9 +45,9 @@ public class Health : MonoBehaviour
 
         health -= damage;
 
-        if (health <= 0 ) {
-            Die();
-        }
+        // if (health <= 0 ) {
+        //     Die();
+        // }
 
     }
 
