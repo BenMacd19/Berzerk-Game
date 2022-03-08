@@ -44671,6 +44671,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 79435554}
+    - target: {fileID: 2036795752, guid: b9585ca7a45a2d9478afb00027be7f98, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3726553583937269955, guid: fe0653b5543cbf046be7c24a538033bc, type: 3}
     - target: {fileID: 6835697486940539060, guid: b9585ca7a45a2d9478afb00027be7f98, type: 3}
       propertyPath: m_Name
       value: Enemy Follow

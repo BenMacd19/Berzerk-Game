@@ -15,7 +15,7 @@ public class ExplodeDecision : Decision {
         
         float distanceToTarget = Vector3.Distance(controller.target.position, controller.transform.position);
         
-        if (distanceToTarget < controller.currentEnemyStats.explodeDistance || controller.enemyHealth.health <= 0) {
+        if (distanceToTarget < controller.currentEnemyStats.explodeDistance) {
             return true;
         } else {
             return false;

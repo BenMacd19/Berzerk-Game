@@ -16,13 +16,4 @@ public class ExplodeAction : Action
         Destroy(controller.gameObject);
     }
 
-    // IEnumerator DisableForce(StateController controller, PointEffector2D explosionForce) {
-        
-    //     controller.gameObject.GetComponent<Collider2D>().enabled = false;
-    //     yield return new WaitForSeconds(0.1f);
-    //     explosionForce.enabled = false;
-    //     Destroy(controller.gameObject);
-        
-    // }
-
 }

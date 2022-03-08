@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
     [SerializeField] GameObject healthBarUI;
     [SerializeField] Slider slider;
 
+    [SerializeField] GameObject deathEffect;
+
     void Start() {
         health = maxHealth;
         slider.value = CalculateHealth();
@@ -45,13 +47,14 @@ public class Health : MonoBehaviour
 
         health -= damage;
 
-        // if (health <= 0 ) {
-        //     Die();
-        // }
+        if (health <= 0 ) {
+            Die();
+        }
 
     }
 
     void Die() {
+        GameObject explosionEffect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 
