@@ -5,13 +5,18 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] public float health = 100;
+    [HideInInspector] public float health = 100;
     [SerializeField] public float maxHealth= 100;
 
     [SerializeField] GameObject healthBarUI;
+    Canvas healthBarUICanvas;
     [SerializeField] Slider slider;
 
     [SerializeField] GameObject deathEffect;
+
+    void Awake() {
+        healthBarUICanvas = healthBarUI.GetComponent<Canvas>();
+    }
 
     void Start() {
         health = maxHealth;
@@ -24,7 +29,7 @@ public class Health : MonoBehaviour
         slider.value = CalculateHealth();
 
         if (health < maxHealth) {
-            healthBarUI.SetActive(true);
+            healthBarUICanvas.enabled = true;
         }
     }
 
@@ -54,6 +59,7 @@ public class Health : MonoBehaviour
     }
 
     void Die() {
+        AiManager.Instance.RemoveEnemyAttacking(GetComponent<StateController>().GetInstanceID());
         GameObject explosionEffect = Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

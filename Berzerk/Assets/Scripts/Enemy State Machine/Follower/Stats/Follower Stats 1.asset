@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Follower Stats 1
   m_EditorClassIdentifier: 
   followDistance: 30
-  explodeDistance: 2.5
-  explodeEffect: {fileID: 0}
+  explodeDistance: 3
+  explodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
   shootDistance: 0
   keepDistance: 0
   keepDistanceDegrees: 0
-  turnSpeed: 5
+  turnSpeed: 10
   bulletPrefab: {fileID: 0}
   bulletForce: 0
   rateOfFire: 0
   followerFollowDistance: 30
-  followerExplodeDistance: 2.5
+  followerExplodeDistance: 5
   followerExplodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
   followerTurnSpeed: 10

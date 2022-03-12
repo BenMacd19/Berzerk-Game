@@ -18,7 +18,7 @@ public class DamageDealer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.2085f);
+        Destroy(effect, 0.25f);
         Destroy(gameObject);
     }
 

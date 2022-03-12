@@ -20,18 +20,33 @@ public class StateController : MonoBehaviour {
     public State remainState;
 
     [Header("Enemy")]
-    public Transform target;
-    public Transform firePoint;
+    #nullable enable
+    [HideInInspector] public Transform? target;
+    [HideInInspector] public Transform? firePoint;
+    [HideInInspector] public ParticleSystem? muzzleFlash;
+    #nullable disable
 
     void Awake () 
     {
         ai = GetComponent<IAstarAI>();
-        enemyHealth = GetComponent<Health>();
+        target = FindObjectOfType<Player>().transform;
+
+        // Check if the enemy has a weapon
+        Transform tmp = transform.Find("Weapon");
+        if (tmp == null) {
+            // No weapon
+        } else {
+            firePoint = tmp.Find("FirePoint");
+            muzzleFlash = firePoint.Find("Enemy Muzzle Flash").gameObject.GetComponent<ParticleSystem>();
+        }
     }
 
     void Update()
     {
+        // Get current AI level
         this.aiLevel = AiManager.Instance.aiLevel;
+
+        // Set the enemies stats to the AI level
         currentEnemyStats = enemyStats[this.aiLevel - 1];
         currentEnemyStats.SetUpEnemy();
 

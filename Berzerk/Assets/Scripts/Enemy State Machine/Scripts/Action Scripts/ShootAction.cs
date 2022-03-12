@@ -39,7 +39,7 @@ public class ShootAction : Action
         if(controller.timer > controller.currentEnemyStats.rateOfFire){
             float aimOffset = Random.Range(-0.2f, 0.2f);
             //Debug.Log(aimOffset);
-
+            controller.muzzleFlash.Play();
             GameObject bullet = Instantiate(controller.currentEnemyStats.bulletPrefab, controller.firePoint.position, controller.firePoint.rotation);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             Vector3 newUp = new Vector3(controller.firePoint.transform.up.x, controller.firePoint.transform.up.y + aimOffset, controller.firePoint.transform.up.z);    

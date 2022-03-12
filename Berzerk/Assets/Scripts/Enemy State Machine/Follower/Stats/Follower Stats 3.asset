@@ -23,6 +23,6 @@ MonoBehaviour:
   bulletForce: 0
   rateOfFire: 0
   followerFollowDistance: 30
-  followerExplodeDistance: 2.5
+  followerExplodeDistance: 5
   followerExplodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
   followerTurnSpeed: 10

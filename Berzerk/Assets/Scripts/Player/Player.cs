@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Vector2 moveInput;
     Vector2 aimPos;
 
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float moveSpeed;
 
     Rigidbody2D rb;
     Camera cam;
@@ -20,13 +20,7 @@ public class Player : MonoBehaviour
         cam = Camera.main;   
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void FixedUpdate() {
+    void FixedUpdate() {
         Move();
         LookDirection();
     }
@@ -41,11 +35,6 @@ public class Player : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
         rb.velocity = playerVelocity;
     }
-
-    // // Gets the position of the mouse on the screen
-    // void OnLook(InputValue value) {
-    //    aimPos = cam.ScreenToWorldPoint(value.Get<Vector2>());
-    // }
 
     // Points the player to the position of the mouse
     void LookDirection() {
