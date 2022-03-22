@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 5821983631597327081}
   m_Layer: 0
   m_Name: Enemy Shooter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 2800000, guid: 3bb55c4c51c852248ac0428597699183, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

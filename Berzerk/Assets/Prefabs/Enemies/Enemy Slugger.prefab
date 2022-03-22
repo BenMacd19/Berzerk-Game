@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 7154460693269061617}
   m_Layer: 0
   m_Name: Enemy Slugger
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 2800000, guid: 7e807b1ab5ef8b14eb4d7996a30b40f3, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
