@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     public class Wave 
     {
         public string name;
-        public GameObject enemy;
+        public GameObject[] enemies;
         public int numEnemies;
         public float spawnRate;
     }
@@ -25,6 +25,8 @@ public class WaveSpawner : MonoBehaviour
     private float searchCountdown = 1;
 
     public SpawnState state = SpawnState.COUNTING;
+
+    public float spawnRadius;
 
     void Start() 
     {
@@ -76,7 +78,7 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.SPAWNING;
 
         for (int i = 0; i < wave.numEnemies; i++) {
-            SpawnEnemy(wave.enemy);
+            SpawnEnemy(wave.enemies[Random.Range(0, wave.enemies.Length)]);
             yield return new WaitForSecondsRealtime(wave.spawnRate);
         }
 
@@ -85,7 +87,12 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void SpawnEnemy(GameObject enemy) {
-        Instantiate(enemy, transform.position, transform.rotation);
+        Instantiate(enemy, Random.insideUnitCircle * spawnRadius, transform.rotation);
+    }
+
+    void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, spawnRadius);
     }
 
 }

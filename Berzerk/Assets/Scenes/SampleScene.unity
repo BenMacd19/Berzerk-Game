@@ -44849,7 +44849,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Shooters
-    enemy: {fileID: 3277230472098382935, guid: 5dd7fe83883c9f244b1b462d00c25702, type: 3}
+    enemies:
+    - {fileID: 6835697486940539060, guid: b9585ca7a45a2d9478afb00027be7f98, type: 3}
+    - {fileID: 3277230472098382935, guid: 5dd7fe83883c9f244b1b462d00c25702, type: 3}
     numEnemies: 5
     spawnRate: 0.5
   timeBetweenWaves: 5
