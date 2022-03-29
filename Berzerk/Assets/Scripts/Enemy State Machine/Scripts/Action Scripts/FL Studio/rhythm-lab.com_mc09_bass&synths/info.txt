@@ -1,9 +1,0 @@
-MC-09 is suprisingly cool little module, with fat and crispy lo-fi character. It doesn't look fancy, but can produce extremely fat and powerful sounds. Sequencer is a little hard to program, so I just pluged it to my MIDI interface and recorded the samples.
-
-This pack contains 128 Bass, Synth and FX sounds, including Subs, Sweeps, Acid Loops, Waveforms, Drops, Wow and SQ Bases, and much more.
-
-Wav format, 24 bit, 44100, mono
-
-Produced by Dmitriy "Cyberworm" Vasilyev 
-All offered samples are royalty free.
-more samples on http://www.rhythm-lab.com
