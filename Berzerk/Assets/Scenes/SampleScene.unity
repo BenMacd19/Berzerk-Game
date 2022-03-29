@@ -293,7 +293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &222680983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44847,16 +44847,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008e6c6c41090e647b02d28c38968589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveNum: 1
   waves:
   - name: Shooters
     enemies:
     - {fileID: 6835697486940539060, guid: b9585ca7a45a2d9478afb00027be7f98, type: 3}
     - {fileID: 3277230472098382935, guid: 5dd7fe83883c9f244b1b462d00c25702, type: 3}
-    numEnemies: 5
+    numEnemies: 1
     spawnRate: 0.5
   timeBetweenWaves: 5
   waveCountdown: 0
   state: 2
+  spawnRadius: 25
 --- !u!4 &1788479920
 Transform:
   m_ObjectHideFlags: 0

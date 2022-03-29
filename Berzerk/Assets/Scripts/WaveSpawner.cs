@@ -16,6 +16,7 @@ public class WaveSpawner : MonoBehaviour
         public float spawnRate;
     }
 
+    public int waveNum;
     public Wave[] waves;
     private int nextWave = 0;
     
@@ -52,6 +53,9 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void WaveCompleted() {
+
+        waveNum ++;
+
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
@@ -77,7 +81,7 @@ public class WaveSpawner : MonoBehaviour
     IEnumerator SpawnWave(Wave wave) {
         state = SpawnState.SPAWNING;
 
-        for (int i = 0; i < wave.numEnemies; i++) {
+        for (int i = 0; i < waveNum; i++) {
             SpawnEnemy(wave.enemies[Random.Range(0, wave.enemies.Length)]);
             yield return new WaitForSecondsRealtime(wave.spawnRate);
         }
