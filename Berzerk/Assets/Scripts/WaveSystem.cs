@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSystem : MonoBehaviour
 {
+
+    public static WaveSystem Instance { get; private set; }
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
     public SpawnState state = SpawnState.COUNTING;
@@ -15,11 +17,16 @@ public class WaveSpawner : MonoBehaviour
     public int waveNum;   
     public GameObject[] enemies;
     public int numEnemies;
+    public int increaseHealthBy;
 
     public float spawnRate;
     public float spawnRadius;
 
     private float searchCountdown = 1;
+
+    void Awake() {
+        Instance = this;
+    }
 
     void Start() 
     {

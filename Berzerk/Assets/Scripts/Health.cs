@@ -19,6 +19,7 @@ public class Health : MonoBehaviour
     }
 
     void Start() {
+        maxHealth += (WaveSystem.Instance.waveNum * WaveSystem.Instance.increaseHealthBy);
         health = maxHealth;
         slider.value = CalculateHealth();
     }
