@@ -6,28 +6,20 @@ public class WaveSpawner : MonoBehaviour
 {
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
-    
-    [System.Serializable]
-    public class Wave 
-    {
-        public string name;
-        public GameObject[] enemies;
-        public int numEnemies;
-        public float spawnRate;
-    }
-
-    public int waveNum;
-    public Wave[] waves;
-    private int nextWave = 0;
+    public SpawnState state = SpawnState.COUNTING;
     
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
 
-    private float searchCountdown = 1;
+    [Header("Wave")]
+    public int waveNum;   
+    public GameObject[] enemies;
+    public int numEnemies;
 
-    public SpawnState state = SpawnState.COUNTING;
-
+    public float spawnRate;
     public float spawnRadius;
+
+    private float searchCountdown = 1;
 
     void Start() 
     {
@@ -45,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveCountdown <= 0) {
             if (state != SpawnState.SPAWNING) {
-                StartCoroutine(SpawnWave(waves[nextWave]));
+                StartCoroutine(SpawnWave());
             } 
         } else {
             waveCountdown -= Time.deltaTime;
@@ -59,12 +51,6 @@ public class WaveSpawner : MonoBehaviour
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
-        if (nextWave + 1 > waves.Length - 1) {
-            nextWave = 0;
-            return;
-        } else {
-            nextWave++;
-        }
     }
 
     bool EnemyIsAlive() {
@@ -78,12 +64,12 @@ public class WaveSpawner : MonoBehaviour
         return true;
     }
 
-    IEnumerator SpawnWave(Wave wave) {
+    IEnumerator SpawnWave() {
         state = SpawnState.SPAWNING;
 
         for (int i = 0; i < waveNum; i++) {
-            SpawnEnemy(wave.enemies[Random.Range(0, wave.enemies.Length)]);
-            yield return new WaitForSecondsRealtime(wave.spawnRate);
+            SpawnEnemy(enemies[Random.Range(0, enemies.Length)]);
+            yield return new WaitForSecondsRealtime(spawnRate);
         }
 
         state = SpawnState.WAITING;
