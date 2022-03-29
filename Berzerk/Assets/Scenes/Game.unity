@@ -128,36 +128,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1958126648439514160, guid: a2d653fe2d8d3d34eb737a4ce95654b0, type: 3}
   m_PrefabInstance: {fileID: 518298597}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &114729746
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 114729747}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &114729747
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114729746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3579364, y: -0.48490646, z: -3.6728742}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &129583367
 GameObject:
   m_ObjectHideFlags: 3
@@ -44722,7 +44692,7 @@ RectTransform:
   m_Children:
   - {fileID: 1883178087}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -44999,6 +44969,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 6835697486940539060, guid: b9585ca7a45a2d9478afb00027be7f98, type: 3}
   - {fileID: 3277230472098382935, guid: 5dd7fe83883c9f244b1b462d00c25702, type: 3}
+  - {fileID: 2231842149776869711, guid: 1bbe2edd1e6393d40bfda1f3d4160cdb, type: 3}
   numEnemies: 0
   increaseHealthBy: 5
   spawnRate: 1

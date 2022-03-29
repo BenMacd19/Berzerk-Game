@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff00c1633133a949994afe6ef38a0c3, type: 3}
+  m_Name: SluggerStopMovingState
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 697579d69c352084d8b95734e650002d, type: 2}
+  - {fileID: 11400000, guid: d54708d5df7c7bf43b1d972e0b91d4f3, type: 2}
+  transitions:
+  - decision: {fileID: 11400000, guid: feebabd3b9a7eee47a26ae7908e179e3, type: 2}
+    trueState: {fileID: 11400000, guid: 2bb7c412345d1be4b8c7d9423baa03a7, type: 2}
+    falseState: {fileID: 11400000, guid: e47c9a7ad3c9fef42a60091674c7e547, type: 2}
+  sceneGizmoColor: {r: 0.044875145, g: 0, b: 1, a: 1}
