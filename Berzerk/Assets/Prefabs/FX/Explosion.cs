@@ -5,6 +5,8 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
 
+    public int damage;
+
     PointEffector2D explosionForce;
     Collider2D explosionCollider;
 

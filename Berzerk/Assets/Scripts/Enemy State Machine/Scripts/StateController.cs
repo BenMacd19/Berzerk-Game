@@ -8,7 +8,7 @@ public class StateController : MonoBehaviour {
     [HideInInspector] public IAstarAI ai;
     [HideInInspector] public int aiLevel;
     [HideInInspector] public int wallLayerMask = 1 << 8;
-    [HideInInspector] public Health enemyHealth;
+    [HideInInspector] public EnemyHealth enemyHealth;
     [HideInInspector] public float timer;
     
     [Header("AI Level Stats")]
