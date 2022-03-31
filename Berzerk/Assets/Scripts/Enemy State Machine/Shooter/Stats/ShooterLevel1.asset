@@ -18,16 +18,16 @@ MonoBehaviour:
   shootDistance: 20
   keepDistance: 10
   keepDistanceDegrees: 60
-  moveSpeed: 10
+  moveSpeed: 50
   turnSpeed: 10
   bulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
   bulletForce: 20
   rateOfFire: 0.25
   shooterFollowDistance: 30
-  shooterShootDistance: 20
-  shooterKeepDistance: 10
+  shooterShootDistance: 15
+  shooterKeepDistance: 7.5
   shooterKeepDistanceDegrees: 60
-  shooterMoveSpeed: 40
+  shooterMoveSpeed: 50
   shooterTurnSpeed: 10
   shooterBulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
   shooterBulletForce: 20

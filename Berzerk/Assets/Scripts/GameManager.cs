@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
 
-    void GameOver() {
+    [SerializeField] GameObject player;
+    [SerializeField] GameOver gameOverScreen;
+    [SerializeField] WaveSystem waveSystem;
 
+    void GameOver() {
+        DisablePlayer();
+        gameOverScreen.Setup(waveSystem.waveNum);
+    }
+
+    void DisablePlayer() {
+        player.SetActive(false);
     }
     
 }

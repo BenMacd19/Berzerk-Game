@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 8837586491570914606}
   - component: {fileID: 7154460692710198430}
   - component: {fileID: 7154460693269061617}
+  - component: {fileID: -6813368101271842902}
   m_Layer: 0
   m_Name: Enemy Slugger
   m_TagString: Enemy
@@ -451,6 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13395a33d8c595e45845f012fd080a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   aiLevel: 0
   wallLayerMask: 256
   enemyHealth: {fileID: 0}
@@ -465,6 +467,19 @@ MonoBehaviour:
   target: {fileID: 0}
   firePoint: {fileID: 2231842150717424832}
   muzzleFlash: {fileID: 0}
+--- !u!114 &-6813368101271842902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231842149776869711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d399ba9cb46094ebc79d61dd104009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avoidanceRadius: 2.5
 --- !u!1 &2231842150280980790
 GameObject:
   m_ObjectHideFlags: 0

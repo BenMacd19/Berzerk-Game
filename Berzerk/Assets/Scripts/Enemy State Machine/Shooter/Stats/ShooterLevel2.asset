@@ -13,20 +13,22 @@ MonoBehaviour:
   m_Name: ShooterLevel2
   m_EditorClassIdentifier: 
   followDistance: 0
+  explodeDistance: 0
+  explodeEffect: {fileID: 0}
   shootDistance: 0
   keepDistance: 0
   keepDistanceDegrees: 0
+  moveSpeed: 0
   turnSpeed: 0
   bulletPrefab: {fileID: 0}
-  muzzleFlash: {fileID: 0}
   bulletForce: 0
   rateOfFire: 0
   shooterFollowDistance: 30
-  shooterShootDistance: 20
-  shooterKeepDistance: 10
+  shooterShootDistance: 15
+  shooterKeepDistance: 7.5
   shooterKeepDistanceDegrees: 60
+  shooterMoveSpeed: 50
   shooterTurnSpeed: 10
   shooterBulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
-  shooterMuzzleFlash: {fileID: 0}
   shooterBulletForce: 20
   shooterRateOfFire: 0.25

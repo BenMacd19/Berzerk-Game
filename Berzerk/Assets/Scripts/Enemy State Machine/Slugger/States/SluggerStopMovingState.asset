@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: SluggerStopMovingState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 697579d69c352084d8b95734e650002d, type: 2}
   - {fileID: 11400000, guid: d54708d5df7c7bf43b1d972e0b91d4f3, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: feebabd3b9a7eee47a26ae7908e179e3, type: 2}

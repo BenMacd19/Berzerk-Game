@@ -18,6 +18,7 @@ MonoBehaviour:
   shootDistance: 20
   keepDistance: 10
   keepDistanceDegrees: 60
+  moveSpeed: 40
   turnSpeed: 5
   bulletPrefab: {fileID: 3416946630596798289, guid: abf72b3dcd696cf4086d99631484ec62, type: 3}
   bulletForce: 10
@@ -26,7 +27,8 @@ MonoBehaviour:
   sluggerShootDistance: 20
   sluggerStopMovingDistance: 10
   sluggerKeepDistanceDegrees: 60
-  sluggerTurnSpeed: 5
+  sluggerMoveSpeed: 40
+  sluggerTurnSpeed: 7.5
   sluggerBulletPrefab: {fileID: 3416946630596798289, guid: abf72b3dcd696cf4086d99631484ec62, type: 3}
   sluggerBulletForce: 10
   sluggerRateOfFire: 0.5

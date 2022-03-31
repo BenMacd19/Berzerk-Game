@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     public float health;
     public float maxHealth;
 
+    [SerializeField] GameObject deathEffect;
+
     public Slider slider;
 
     public GameManager gameManager;
@@ -16,15 +18,15 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         slider.value = CalculateHealth();
-
-        if (health <= 0) {
-            gameManager.Invoke("GameOver", 0);
-        }
     }
 
     void Update()
     {
         slider.value = CalculateHealth();
+        if (health <= 0) {
+            GameObject explosionEffect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            gameManager.Invoke("GameOver", 0);
+        }
     }
 
     float CalculateHealth() {

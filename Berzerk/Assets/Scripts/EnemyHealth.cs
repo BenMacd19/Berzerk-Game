@@ -41,10 +41,15 @@ public class EnemyHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
 
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        Explosion explosion = other.GetComponent<Explosion>();
 
         if (damageDealer != null) {
             TakeDamage(damageDealer.GetDamage());
             damageDealer.Hit();
+        }
+
+        if (explosion != null) {
+            TakeDamage(explosion.damage);
         }
         
     }

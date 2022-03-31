@@ -18,7 +18,7 @@ MonoBehaviour:
   shootDistance: 0
   keepDistance: 0
   keepDistanceDegrees: 0
-  moveSpeed: 10
+  moveSpeed: 55
   turnSpeed: 10
   bulletPrefab: {fileID: 0}
   bulletForce: 0
@@ -26,5 +26,5 @@ MonoBehaviour:
   followerFollowDistance: 30
   followerExplodeDistance: 5
   followerExplodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
-  followerMoveSpeed: 50
+  followerMoveSpeed: 60
   followerTurnSpeed: 10
