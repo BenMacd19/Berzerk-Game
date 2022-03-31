@@ -9,6 +9,7 @@ public class FollowerStats : EnemyStats
     public float followerFollowDistance = 30f;
     public float followerExplodeDistance = 2.5f;
     public GameObject followerExplodeEffect;
+    public float followerMoveSpeed = 50f;
     public float followerTurnSpeed = 5f;
 
     public override void SetUpEnemy()
@@ -16,6 +17,7 @@ public class FollowerStats : EnemyStats
         base.followDistance = followerFollowDistance;
         base.explodeDistance = followerExplodeDistance;
         base.explodeEffect = followerExplodeEffect;
+        base.moveSpeed = followerMoveSpeed;
         base.turnSpeed = followerTurnSpeed;
     }
 

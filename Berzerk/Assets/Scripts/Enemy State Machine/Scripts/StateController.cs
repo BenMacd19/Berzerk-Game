@@ -6,6 +6,7 @@ using Pathfinding;
 public class StateController : MonoBehaviour {
 
     [HideInInspector] public IAstarAI ai;
+    [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public int aiLevel;
     [HideInInspector] public int wallLayerMask = 1 << 8;
     [HideInInspector] public EnemyHealth enemyHealth;
@@ -29,6 +30,7 @@ public class StateController : MonoBehaviour {
     void Awake () 
     {
         ai = GetComponent<IAstarAI>();
+        rb = GetComponent<Rigidbody2D>();
         target = FindObjectOfType<Player>().transform;
 
         // Check if the enemy has a weapon

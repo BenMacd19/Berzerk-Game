@@ -10,6 +10,7 @@ public class SluggerStats : EnemyStats
     public float sluggerShootDistance = 20f;
     public float sluggerStopMovingDistance = 10f;
     public float sluggerKeepDistanceDegrees = 60f;
+    public float sluggerMoveSpeed = 20f;
     public float sluggerTurnSpeed = 10f;
 
     [Header("Bullet")]
@@ -23,6 +24,7 @@ public class SluggerStats : EnemyStats
         base.shootDistance = sluggerShootDistance;
         base.keepDistance = sluggerStopMovingDistance;
         base.keepDistanceDegrees = sluggerKeepDistanceDegrees;
+        base.moveSpeed = sluggerMoveSpeed;
         base.turnSpeed = sluggerTurnSpeed;
 
         base.bulletPrefab = sluggerBulletPrefab;

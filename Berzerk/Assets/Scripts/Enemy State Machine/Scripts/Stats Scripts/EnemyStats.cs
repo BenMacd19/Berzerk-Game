@@ -11,6 +11,7 @@ public abstract class EnemyStats : ScriptableObject
     [HideInInspector] public float shootDistance;
     [HideInInspector] public float keepDistance;
     [HideInInspector] public float keepDistanceDegrees;
+    [HideInInspector] public float moveSpeed;
     [HideInInspector] public float turnSpeed;
 
     [HideInInspector] public GameObject bulletPrefab; 

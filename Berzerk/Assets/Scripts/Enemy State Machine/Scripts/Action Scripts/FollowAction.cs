@@ -27,7 +27,12 @@ public class FollowAction : Action
         
         LookAtTarget(controller);  
 
-        controller.ai.destination = (Vector3) controller.target.position;
+        //controller.ai.destination = (Vector3) controller.target.position;
+        // controller.rb.velocity = controller.rb.transform.up * controller.currentEnemyStats.moveSpeed;
+        // Debug.Log(controller.rb.velocity = Vector2.up * controller.currentEnemyStats.moveSpeed);
+        // Debug.Log(controller.rb.velocity);
+        //Debug.Log(controller.transform.up);
+        controller.rb.AddForce(controller.transform.up * controller.currentEnemyStats.moveSpeed);
 
     }
 

@@ -10,6 +10,7 @@ public class ShooterStats : EnemyStats
     public float shooterShootDistance = 20f;
     public float shooterKeepDistance = 10f;
     public float shooterKeepDistanceDegrees = 60f;
+    public float shooterMoveSpeed = 30f;
     public float shooterTurnSpeed = 10f;
 
     [Header("Bullet")]
@@ -23,6 +24,7 @@ public class ShooterStats : EnemyStats
         base.shootDistance = shooterShootDistance;
         base.keepDistance = shooterKeepDistance;
         base.keepDistanceDegrees = shooterKeepDistanceDegrees;
+        base.moveSpeed = shooterMoveSpeed;
         base.turnSpeed = shooterTurnSpeed;
 
         base.bulletPrefab = shooterBulletPrefab;
