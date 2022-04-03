@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     void GameOver() {
         DisablePlayer();
+        waveSystem.gameObject.SetActive(false);
         gameOverScreen.Setup(waveSystem.waveNum);
     }
 

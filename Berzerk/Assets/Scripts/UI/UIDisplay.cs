@@ -19,6 +19,6 @@ public class UIDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        waveNumText.text = (waveSystem.waveNum.ToString());
+        waveNumText.text = ("Round " + waveSystem.waveNum.ToString());
     }
 }
