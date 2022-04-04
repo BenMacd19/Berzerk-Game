@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ShooterKeepDistanceState
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: bd93ca6e67de39d409a26b5e2da6b675, type: 2}
   - {fileID: 11400000, guid: 2c02f94c526392b4ebb3fd25ffb829f2, type: 2}
+  - {fileID: 11400000, guid: bd93ca6e67de39d409a26b5e2da6b675, type: 2}
   transitions:
   - decision: {fileID: 11400000, guid: b2f239bb0a581f74e9ae850d38df450e, type: 2}
     trueState: {fileID: 11400000, guid: b3ed02c76c358174e80aaecd58a339c7, type: 2}

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+using UnityEngine.AI;
 
 public class StateController : MonoBehaviour {
 
-    [HideInInspector] public IAstarAI ai;
+    [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public int aiLevel;
     [HideInInspector] public int wallLayerMask = 1 << 8;
@@ -29,7 +29,9 @@ public class StateController : MonoBehaviour {
 
     void Awake () 
     {
-        ai = GetComponent<IAstarAI>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         rb = GetComponent<Rigidbody2D>();
         target = FindObjectOfType<Player>().transform;
 
@@ -43,7 +45,7 @@ public class StateController : MonoBehaviour {
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // Get current AI level
         this.aiLevel = AiManager.Instance.aiLevel;

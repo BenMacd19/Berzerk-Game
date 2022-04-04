@@ -32,8 +32,8 @@ public class FollowAction : Action
         // Debug.Log(controller.rb.velocity = Vector2.up * controller.currentEnemyStats.moveSpeed);
         // Debug.Log(controller.rb.velocity);
         //Debug.Log(controller.transform.up);
-        controller.rb.AddForce(controller.transform.up * controller.currentEnemyStats.moveSpeed);
-
+        //controller.rb.AddForce(controller.transform.up * controller.currentEnemyStats.moveSpeed);
+        controller.agent.SetDestination(controller.target.position);
     }
 
     private void FollowLevel2(StateController controller) {

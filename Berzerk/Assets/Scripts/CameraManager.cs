@@ -17,7 +17,7 @@ public class CameraManager : MonoBehaviour
     Vector3 followPointerPosition = new Vector3();
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         // Calculate position for mouse tracker
         mousePosition = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());

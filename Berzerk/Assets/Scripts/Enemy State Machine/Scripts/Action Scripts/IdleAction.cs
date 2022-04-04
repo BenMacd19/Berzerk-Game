@@ -16,7 +16,7 @@ public class IdleAction : Action
 
         // Stop moving
         GraphNode nearestNode = AstarPath.active.GetNearest(controller.transform.position, NNConstraint.Default).node;
-        controller.ai.destination = (Vector3) nearestNode.position;
+        //controller.ai.destination = (Vector3) nearestNode.position;
 
         // Look at target
         Vector3 direction = Vector3.up;

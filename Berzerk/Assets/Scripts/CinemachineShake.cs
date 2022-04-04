@@ -29,7 +29,7 @@ public class CinemachineShake : MonoBehaviour
         shakeTimer = time;      
     }
 
-    void Update() {
+    void LateUpdate() {
         if (shakeTimer > 0) {
             shakeTimer -= Time.deltaTime;
             CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
