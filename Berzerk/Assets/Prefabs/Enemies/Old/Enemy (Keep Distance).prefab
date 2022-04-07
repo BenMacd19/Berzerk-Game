@@ -615,6 +615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
+  healthBarUI: {fileID: 0}
+  slider: {fileID: 0}
+  deathEffect: {fileID: 0}
 --- !u!1 &9056976913718257462
 GameObject:
   m_ObjectHideFlags: 0

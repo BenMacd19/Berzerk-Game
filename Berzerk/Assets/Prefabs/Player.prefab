@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958126647733191441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.027, y: 0.91, z: 0}
+  m_LocalPosition: {x: 0.027, y: 1.083, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4953321925418522}
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_SortingLayerID: 2011515391
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b6db6e8a4e4b76d4bb4e5f20fed0d501, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33f17c5e04b61504b9c157312e3891c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -289,9 +289,9 @@ GameObject:
   - component: {fileID: 1958126648439514162}
   - component: {fileID: 332102432}
   - component: {fileID: 1958126648439514126}
-  - component: {fileID: 1958126648439514165}
   - component: {fileID: 1958126648439514163}
   - component: {fileID: 1471465855}
+  - component: {fileID: 4984317269890297010}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -336,7 +336,7 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -386,19 +386,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1958126648439514165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958126648439514127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f88f9aaf1c93c4eb6a55c7d31ad3fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
 --- !u!114 &1958126648439514163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,9 +415,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 500
+  maxHealth: 1000
+  deathEffect: {fileID: 3726553583937269955, guid: 2577de45674c3164aa6f6a318572e82f, type: 3}
   slider: {fileID: 0}
   gameManager: {fileID: 0}
+--- !u!114 &4984317269890297010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958126648439514127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7f88f9aaf1c93c4eb6a55c7d31ad3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
 --- !u!1 &1958126648631123389
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4063423554089718088, guid: 94bfa68ac6ac60f42a2ef15e6f2b37b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.165
       objectReference: {fileID: 0}
     - target: {fileID: 4063423554089718088, guid: 94bfa68ac6ac60f42a2ef15e6f2b37b6, type: 3}
       propertyPath: m_LocalPosition.z

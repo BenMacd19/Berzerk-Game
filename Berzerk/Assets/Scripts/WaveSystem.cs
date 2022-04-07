@@ -87,9 +87,9 @@ public class WaveSystem : MonoBehaviour
         Instantiate(enemy, Random.insideUnitCircle * spawnRadius, transform.rotation);
     }
 
-    void OnDrawGizmos() {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, spawnRadius);
-    }
+    // void OnDrawGizmos() {
+    //     Gizmos.color = Color.yellow;
+    //     Gizmos.DrawWireSphere(transform.position, spawnRadius);
+    // }
 
 }

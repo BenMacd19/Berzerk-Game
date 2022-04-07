@@ -33,7 +33,7 @@ public class StateController : MonoBehaviour {
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         rb = GetComponent<Rigidbody2D>();
-        target = FindObjectOfType<Player>().transform;
+        target = FindObjectOfType<PlayerMovement>().transform;
 
         // Check if the enemy has a weapon
         Transform tmp = transform.Find("Weapon");
