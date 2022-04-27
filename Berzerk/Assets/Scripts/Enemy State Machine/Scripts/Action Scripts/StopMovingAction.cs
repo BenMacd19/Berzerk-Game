@@ -12,12 +12,10 @@ public class StopMovingAction : Action
     }
 
     private void StopMoving(StateController controller) {
-
         NavMeshHit myNavHit;
         if(NavMesh.SamplePosition(controller.transform.position, out myNavHit, 100 , -1)) {
             controller.agent.destination = myNavHit.position;
         }
-
     }
 
 }

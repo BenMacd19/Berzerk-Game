@@ -29,10 +29,13 @@ public class StateController : MonoBehaviour {
 
     void Awake () 
     {
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        
         rb = GetComponent<Rigidbody2D>();
+
         target = FindObjectOfType<PlayerMovement>().transform;
 
         // Check if the enemy has a weapon
@@ -53,6 +56,20 @@ public class StateController : MonoBehaviour {
         // Set the enemies stats to the AI level
         currentEnemyStats = enemyStats[this.aiLevel - 1];
         currentEnemyStats.SetUpEnemy();
+        agent.speed = currentEnemyStats.moveSpeed;
+
+        switch (aiLevel)
+        {
+            case 1:
+                agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
+                break;
+            case 2:
+                agent.obstacleAvoidanceType = ObstacleAvoidanceType.MedQualityObstacleAvoidance;
+                break;
+            case 3:
+                agent.obstacleAvoidanceType = ObstacleAvoidanceType.MedQualityObstacleAvoidance;
+                break;
+        }
 
         currentState.UpdateState(this);
     }
@@ -67,11 +84,17 @@ public class StateController : MonoBehaviour {
 
     void OnDrawGizmos()
     {
-        if (currentState != null) 
-        {
-            Gizmos.color = currentState.sceneGizmoColor;
-            Gizmos.DrawWireSphere (transform.position, 2.5f);
-        }
+        // if (currentState != null) 
+        // {
+        //     Gizmos.color = currentState.sceneGizmoColor;
+        //     Gizmos.DrawWireSphere (transform.position, 2.5f);
+        // }
+
+        Debug.DrawRay(transform.position, firePoint.up * 12, Color.red);
+
+        // Gizmos.color = Color.red;
+        // Gizmos.DrawWireSphere (target.transform.position, 2.75f);
+
     }
     
 }

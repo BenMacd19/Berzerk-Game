@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a845f775836c6447a7627e2a15cc283, type: 3}
   m_Name: Slugger Stats 1
   m_EditorClassIdentifier: 
-  followDistance: 30
+  followDistance: 50
   explodeDistance: 0
   explodeEffect: {fileID: 0}
   shootDistance: 20
   keepDistance: 10
   keepDistanceDegrees: 60
   moveSpeed: 40
-  turnSpeed: 5
+  turnSpeed: 7.5
   bulletPrefab: {fileID: 3416946630596798289, guid: abf72b3dcd696cf4086d99631484ec62, type: 3}
   bulletForce: 10
   rateOfFire: 0.5
-  sluggerFollowDistance: 30
+  sluggerFollowDistance: 50
   sluggerShootDistance: 20
   sluggerStopMovingDistance: 10
   sluggerKeepDistanceDegrees: 60
-  sluggerMoveSpeed: 40
+  sluggerMoveSpeed: 3.5
   sluggerTurnSpeed: 7.5
   sluggerBulletPrefab: {fileID: 3416946630596798289, guid: abf72b3dcd696cf4086d99631484ec62, type: 3}
   sluggerBulletForce: 10

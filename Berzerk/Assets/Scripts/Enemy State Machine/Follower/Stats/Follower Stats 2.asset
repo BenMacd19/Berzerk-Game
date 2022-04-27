@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73203318fb2224a9f16fc55a59354a, type: 3}
   m_Name: Follower Stats 2
   m_EditorClassIdentifier: 
-  followDistance: 0
-  explodeDistance: 0
-  explodeEffect: {fileID: 0}
+  followDistance: 50
+  explodeDistance: 5
+  explodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
   shootDistance: 0
   keepDistance: 0
   keepDistanceDegrees: 0
-  moveSpeed: 0
-  turnSpeed: 0
+  moveSpeed: 60
+  turnSpeed: 10
   bulletPrefab: {fileID: 0}
   bulletForce: 0
   rateOfFire: 0
-  followerFollowDistance: 30
+  followerFollowDistance: 50
   followerExplodeDistance: 5
   followerExplodeEffect: {fileID: 3726553583937269955, guid: 8eecc8360ff25e9429bbfcb07370f3c3, type: 3}
-  followerMoveSpeed: 60
+  followerMoveSpeed: 8
   followerTurnSpeed: 10

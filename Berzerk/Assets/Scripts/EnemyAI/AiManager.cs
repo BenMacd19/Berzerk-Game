@@ -7,17 +7,34 @@ public class AiManager : MonoBehaviour
 
     public static AiManager Instance { get; private set; }
 
-    [SerializeField] int maxEnemiesAttacking = 2;
+    public int maxEnemiesAttacking = 2;
     int maxEnemiesAttackingCopy;
     public List<int> enemiesAttacking;
-    [Range(1,3)] public int aiLevel = 1;  
+    [Range(1,3)] public int aiLevel = 1;
 
     void Awake() {
         Instance = this;
+        aiLevel = MainMenu.aiLevel;
     }
 
     void Start() {
         maxEnemiesAttackingCopy = maxEnemiesAttacking;
+    }
+
+    void IncreaseLevel() {
+        if ((aiLevel + 1) > 3) {
+            return;
+        } else {
+            aiLevel += 1;
+        } 
+    }
+
+    void DecreaseLevel() {
+        if ((aiLevel - 1) < 1) {
+            return;
+        } else {
+            aiLevel -= 1;
+        } 
     }
 
     void Update() {

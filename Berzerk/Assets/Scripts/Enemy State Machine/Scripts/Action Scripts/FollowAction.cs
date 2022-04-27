@@ -24,32 +24,25 @@ public class FollowAction : Action
     }
 
     private void FollowLevel1(StateController controller) {
-        
-        LookAtTarget(controller);  
-
-        //controller.ai.destination = (Vector3) controller.target.position;
-        // controller.rb.velocity = controller.rb.transform.up * controller.currentEnemyStats.moveSpeed;
-        // Debug.Log(controller.rb.velocity = Vector2.up * controller.currentEnemyStats.moveSpeed);
-        // Debug.Log(controller.rb.velocity);
-        //Debug.Log(controller.transform.up);
-        //controller.rb.AddForce(controller.transform.up * controller.currentEnemyStats.moveSpeed);
+        LookAtTarget(controller);
         controller.agent.SetDestination(controller.target.position);
     }
 
     private void FollowLevel2(StateController controller) {
-
+        LookAtTarget(controller);
+        Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
+        Vector3 targetDir = controller.target.position - controller.transform.position;
+        float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
+        controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
     }
 
     private void FollowLevel3(StateController controller) {
 
+        LookAtTarget(controller);
         Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
-
-        if (InterceptTargetDirection(controller.target.position, controller.transform.position, targetRb.velocity, controller.currentEnemyStats.bulletForce, out var direction)) {
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-            controller.transform.rotation = Quaternion.Slerp (controller.transform.rotation, Quaternion.Euler (0, 0, angle), controller.currentEnemyStats.turnSpeed * Time.deltaTime);
-        } else {
-            LookAtTarget(controller);
-        }
+        Vector3 targetDir = controller.target.position - controller.transform.position;
+        float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
+        controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
 
     }
 

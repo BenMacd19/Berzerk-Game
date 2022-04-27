@@ -55,6 +55,8 @@ public class WaveSystem : MonoBehaviour
 
         waveNum ++;
 
+        IncreaseEnemies();
+
         state = SpawnState.COUNTING;
         waveCountdown = timeBetweenWaves;
 
@@ -85,6 +87,12 @@ public class WaveSystem : MonoBehaviour
 
     void SpawnEnemy(GameObject enemy) {
         Instantiate(enemy, Random.insideUnitCircle * spawnRadius, transform.rotation);
+    }
+
+    void IncreaseEnemies() {
+        if (waveNum % 4 == 0) {
+            AiManager.Instance.maxEnemiesAttacking += 1;
+        }
     }
 
     // void OnDrawGizmos() {

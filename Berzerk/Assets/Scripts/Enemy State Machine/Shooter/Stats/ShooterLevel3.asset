@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00dabce46df44d43b17b65924febc78, type: 3}
   m_Name: ShooterLevel3
   m_EditorClassIdentifier: 
-  followDistance: 30
+  followDistance: 50
   explodeDistance: 0
   explodeEffect: {fileID: 0}
-  shootDistance: 20
-  keepDistance: 10
+  shootDistance: 15
+  keepDistance: 7.5
   keepDistanceDegrees: 60
-  moveSpeed: 0
+  moveSpeed: 50
   turnSpeed: 10
   bulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
-  bulletForce: 20
+  bulletForce: 25
   rateOfFire: 0.25
-  shooterFollowDistance: 30
+  shooterFollowDistance: 50
   shooterShootDistance: 15
   shooterKeepDistance: 7.5
   shooterKeepDistanceDegrees: 60
-  shooterMoveSpeed: 50
+  shooterMoveSpeed: 10
   shooterTurnSpeed: 10
   shooterBulletPrefab: {fileID: 3416946630596798289, guid: 724a3bb4c9ba6ac4e80bf06ef6ded429, type: 3}
-  shooterBulletForce: 30
+  shooterBulletForce: 25
   shooterRateOfFire: 0.25

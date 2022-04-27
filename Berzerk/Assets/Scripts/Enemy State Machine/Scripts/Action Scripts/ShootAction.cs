@@ -37,14 +37,10 @@ public class ShootAction : Action
 
         // Shoot at the rate of fire
         if(controller.timer > controller.currentEnemyStats.rateOfFire){
-            float aimOffset = Random.Range(-0.2f, 0.2f);
-            //Debug.Log(aimOffset);
             controller.muzzleFlash.Play();
             GameObject bullet = Instantiate(controller.currentEnemyStats.bulletPrefab, controller.firePoint.position, controller.firePoint.rotation);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
-            Vector3 newUp = new Vector3(controller.firePoint.transform.up.x, controller.firePoint.transform.up.y + aimOffset, controller.firePoint.transform.up.z);    
-            bulletRb.AddForce(newUp * controller.currentEnemyStats.bulletForce, ForceMode2D.Impulse);
-
+            bulletRb.AddForce(RandomOffset(controller) * controller.currentEnemyStats.bulletForce, ForceMode2D.Impulse);
             controller.timer = 0;
         }
   
@@ -85,6 +81,7 @@ public class ShootAction : Action
 
         // Shoot at the rate of fire
         if(controller.timer > controller.currentEnemyStats.rateOfFire){
+            controller.muzzleFlash.Play();
             GameObject bullet = Instantiate(controller.currentEnemyStats.bulletPrefab, controller.firePoint.position, controller.firePoint.rotation);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(controller.firePoint.up * controller.currentEnemyStats.bulletForce, ForceMode2D.Impulse);
@@ -105,6 +102,12 @@ public class ShootAction : Action
         Vector3 direction = controller.target.position - controller.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         controller.transform.rotation = Quaternion.Slerp (controller.transform.rotation, Quaternion.Euler (0, 0, angle), controller.currentEnemyStats.turnSpeed * Time.deltaTime);
+    }
+
+    private Vector3 RandomOffset(StateController controller) {
+        Vector3 randomPosition = Random.insideUnitCircle * 3f;
+        Vector3 aimOffset = controller.target.position + randomPosition;
+        return (aimOffset - controller.transform.position).normalized;
     }
 
     // Predicts the targets location based on its current velocity
