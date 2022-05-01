@@ -76,7 +76,7 @@ public class WaveSystem : MonoBehaviour
     IEnumerator SpawnWave() {
         state = SpawnState.SPAWNING;
 
-        for (int i = 0; i < waveNum; i++) {
+        for (int i = 0; i < waveNum + 2; i++) {
             SpawnEnemy(enemies[Random.Range(0, enemies.Length)]);
             yield return new WaitForSecondsRealtime(spawnRate);
         }
