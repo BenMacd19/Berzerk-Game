@@ -52,6 +52,7 @@ public class StateController : MonoBehaviour {
     {
         // Get current AI level
         this.aiLevel = AiManager.Instance.aiLevel;
+        Debug.Log(aiLevel);
 
         // Set the enemies stats to the AI level
         currentEnemyStats = enemyStats[this.aiLevel - 1];
