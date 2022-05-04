@@ -29,21 +29,23 @@ public class FollowAction : Action
     }
 
     private void FollowLevel2(StateController controller) {
+        // LookAtTarget(controller);
+        // Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
+        // Vector3 targetDir = controller.target.position - controller.transform.position;
+        // float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
+        // controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
         LookAtTarget(controller);
-        Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
-        Vector3 targetDir = controller.target.position - controller.transform.position;
-        float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
-        controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
+        controller.agent.SetDestination(controller.target.position);
     }
 
     private void FollowLevel3(StateController controller) {
-
+        // LookAtTarget(controller);
+        // Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
+        // Vector3 targetDir = controller.target.position - controller.transform.position;
+        // float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
+        // controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
         LookAtTarget(controller);
-        Rigidbody2D targetRb = controller.target.GetComponent<Rigidbody2D>();
-        Vector3 targetDir = controller.target.position - controller.transform.position;
-        float lookAhead = targetDir.magnitude / (controller.agent.speed + targetRb.velocity.magnitude);
-        controller.agent.SetDestination(controller.target.transform.position + controller.target.up * lookAhead * 5);
-
+        controller.agent.SetDestination(controller.target.position);
     }
 
     private void LookAtTarget(StateController controller) {
